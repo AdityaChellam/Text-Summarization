@@ -13,19 +13,4 @@ for word in match_pattern:
      
 frequency_list = frequency.keys()
 
-"""Normalized weights""" 
-for words in frequency_list:
-    print(words, frequency[words]/sum(frequency.values()))
-file1.close()
-
-"""to index sentences"""
-print("\n\nPART 2")
-file1=open("textpara.txt","r+");
-sentence = file1.read().lower().split()
-for word in sentence:
-	if word[-1]==".":
-		print(word)
-file1.close()
-
-"""sentence-wise weight"""
-
+	
