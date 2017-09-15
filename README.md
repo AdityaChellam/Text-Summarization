@@ -20,7 +20,7 @@ No external libraries were used for the implementation.
 We make use of the heap data structure (for soring word vectors).
 </p>
 
-<h3>HOW TO RUN<h3>
+<h3>HOW TO RUN</h3>
 <p>
 <ol>
 <li>Select the text file you we to summarize.</li>
