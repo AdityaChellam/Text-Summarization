@@ -22,9 +22,11 @@ We make use of the heap data structure (for soring word vectors).
 
 <h3>HOW TO RUN<h3>
 <p>
-Select the text file you we to summarize.
-Set file path to input text file.
-Run python script to generate summary.
+<ol>
+<li>Select the text file you we to summarize.</li>
+<li>Set file path to input text file.</li>
+<li>Run python script to generate summary.</li>
+</ol>
 </p>
 
 <i>Summary length is maitained as standard length (1/3)rd of total length.</i>
