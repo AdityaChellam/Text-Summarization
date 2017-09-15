@@ -8,9 +8,9 @@ A conventional AI algorithm for summarizing large texts into a short readable fo
 <h3>ALGORITHM</h3>
 <p>
 <ol>
-<li>1. Word vectors weight assignments is used to determine the priority orders indexing.</li>
-<li>2. Two step Stem cells pruning is done to restrict insignificant nodes from contributing to weight sums.</li>
-<li>3. Heap based sorting to form coherence.</li>
+<li> Word vectors weight assignments is used to determine the priority orders indexing.</li>
+<li> Two step Stem cells pruning is done to restrict insignificant nodes from contributing to weight sums.</li>
+<li> Heap based sorting to form coherence.</li>
 </ol>
 </p>
 
