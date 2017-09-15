@@ -1,7 +1,7 @@
 import sys
 import re
 
-stem_word = ["the","a","an","was","is","are","of"]
+stem_word = ["the","a","an","was","is","are","of","etc.."]
 weight={}
 max_heap=[tuple()]
 heap_size = 0
@@ -93,7 +93,7 @@ local_sentence= []
     weight_sentence=0
     for word in sentence:
         if word[-1]==".":
-            if (word in stem_word):
+            if (word[0:-1] in stem_word):
                 pass
             else:
                 weight_sentence+=weight[word[0:-1]]
@@ -111,7 +111,7 @@ local_sentence= []
             local_sentence.append(word)
     print(max_heap)
 
-for _ in range(len(max_heap//3)):
+for _ in range(len(max_heap)//3):
         insert1(pop())
 
 for i in range(len(min_heap)-1):
