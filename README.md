@@ -14,7 +14,7 @@ A conventional AI algorithm for summarizing large texts into a short readable fo
 </ol>
 </p>
 
-<h3>FRAMEWORK</h3>
+<h3>FRAMEWORKS</h3>
 <p>
 No external libraries were used for the implementation.
 We make use of the heap data structure (for sorting word vectors).
