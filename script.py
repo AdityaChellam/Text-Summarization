@@ -1,6 +1,6 @@
 import sys
 import re
-stem_word = ["the","a","an","was","is","are","of","etc..","his","her","himself","herself","it","for","them","they","this","that","and","with"]
+stem_word = ["the","a","an","was","is","are","of","etc..","his","her","himself","herself","it","for","them","they","this","that","and","with","itself","on","with","in","on"]
 weight={}
 max_heap=[tuple()]
 heap_size = 0
