@@ -1,7 +1,6 @@
 import sys
 import re
-
-stem_word = ["the","a","an","was","is","are","of","etc.."]
+stem_word = ["the","a","an","was","is","are","of","etc..","his","her","himself","herself","it","for","them","they","this","that","and","with"]
 weight={}
 max_heap=[tuple()]
 heap_size = 0
@@ -35,7 +34,6 @@ def pop():
     del max_heap[index]
     sink(1)
     return val
-
 min_heap=[tuple()]
 def insert1(weight_set):
     min_heap.append(weight_set)
@@ -67,31 +65,27 @@ def pop1():
     del min_heap[index]
     sink1(1)
     return val
-
 if __name__=='__main__':
     file1=open("textpara.txt","r+");
     text_string = file1.read().lower()
     match_pattern = re.findall(r'\b[a-z]{3,25}\b', text_string)
-
 for word in match_pattern:
         count = weight.get(word,0)
         weight[word] = count + 1
-    frequency_list = weight.keys()
-    for words in frequency_list:
-        print(words, weight[words]/sum(weight.values()))
-    file1.close()
-
+        frequency_list = weight.keys()
+        for words in frequency_list:
+            print(words, weight[words]/sum(weight.values()))
+        file1.close()
 print("\n\nPART 2")
-    file1=open("textpara.txt","r+");
-    sentence = file1.read().lower().split()
-    for word in sentence:
+file1=open("textpara.txt","r+");
+sentence = file1.read().lower().split()
+for word in sentence:
         if word[-1]==".":
             print(word)
-    file1.close()
-
+file1.close()
 local_sentence= []
-    weight_sentence=0
-    for word in sentence:
+weight_sentence=0
+for word in sentence:
         if word[-1]==".":
             if (word[0:-1] in stem_word):
                 pass
@@ -109,10 +103,9 @@ local_sentence= []
                 weight_sentence+=count
                 weight[word]=count
             local_sentence.append(word)
-    print(max_heap)
-
+            print(max_heap)
 for _ in range(len(max_heap)//3):
         insert1(pop())
-
+print("\nFINAL SUMMARY\n")
 for i in range(len(min_heap)-1):
         print(pop1()[1].capitalize()," ")
